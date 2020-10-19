@@ -3,3 +3,34 @@ body {
   width: 50%;
   height: 75%;
 }
+form {
+  display: grid;
+  grid-template-columns: 1 fr;
+  grid-template-rows: repeat(5, 0.20fr);
+  grid-template-areas: 
+  "first-num" 
+  "second-num"
+  "ops"
+  "rcButtons"
+  "results";
+  gap: 20px 0px;
+  justify-content: center;
+}
+
+.first-number{
+  grid-area:"first-num";
+}
+
+.second-number{
+  grid-area:"second-num";
+}
+
+.operations{
+  grid-area: "ops";
+}
+
+.rcButtons{
+  grid-area: "rcButtons";
+  display: flex;
+  justify-content: center;
+}
